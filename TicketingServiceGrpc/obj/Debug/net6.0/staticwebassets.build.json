@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "aJ0pAia7KIsh8oLBk+WqpCvEgCYMZUNuohfmt+gqeUM=",
+  "Source": "TicketingServiceGrpc",
+  "BasePath": "_content/TicketingServiceGrpc",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

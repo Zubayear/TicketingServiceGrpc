@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "BXr8Rokf7w63kARNk8DsiI5GpzUwgfTuiisuJBN4yaDM7n/9m1aMMTKOE1mRimVaK/Cv+vfPyhuMOtiKhJZ0jw==",
+  "success": true,
+  "projectFilePath": "/Users/syedibnazubayear/Documents/dev/TicketingServiceGrpc/GrpcClient/GrpcClient.csproj",
+  "expectedPackageFiles": [
+    "/Users/syedibnazubayear/.nuget/packages/google.protobuf/3.20.1/google.protobuf.3.20.1.nupkg.sha512",
+    "/Users/syedibnazubayear/.nuget/packages/grpc.core.api/2.46.1/grpc.core.api.2.46.1.nupkg.sha512",
+    "/Users/syedibnazubayear/.nuget/packages/grpc.net.client/2.46.0/grpc.net.client.2.46.0.nupkg.sha512",
+    "/Users/syedibnazubayear/.nuget/packages/grpc.net.common/2.46.0/grpc.net.common.2.46.0.nupkg.sha512",
+    "/Users/syedibnazubayear/.nuget/packages/grpc.tools/2.46.1/grpc.tools.2.46.1.nupkg.sha512",
+    "/Users/syedibnazubayear/.nuget/packages/microsoft.extensions.logging.abstractions/3.0.3/microsoft.extensions.logging.abstractions.3.0.3.nupkg.sha512",
+    "/Users/syedibnazubayear/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512"
+  ],
+  "logs": []
+}

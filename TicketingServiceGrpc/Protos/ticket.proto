@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option csharp_namespace = "TicketingServiceGrpc";
+
+package ticket;
+
+service Ticket {
+  rpc CreateTicket(TicketRequest) returns (TicketReply);
+}
+
+message TicketRequest {
+  string ticketName = 1;
+  float ticketPrice = 2;
+  string stadium = 3;
+}
+
+
+message TicketReply {
+  string ticketName = 1;
+  float ticketPrice = 2;
+  string stadium = 3;
+}
