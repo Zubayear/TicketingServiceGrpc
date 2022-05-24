@@ -6,6 +6,8 @@ package ticket;
 
 service Ticket {
   rpc CreateTicket(TicketRequest) returns (TicketReply);
+  rpc GetTicketById(TicketByIdRequest) returns (TicketByIdReply);
+  rpc GetTickets(TicketsRequest) returns (TicketsReply);
 }
 
 message TicketRequest {
@@ -19,4 +21,22 @@ message TicketReply {
   string ticketName = 1;
   float ticketPrice = 2;
   string stadium = 3;
+}
+
+message TicketByIdRequest {
+  string id = 1;
+}
+
+message TicketByIdReply {
+  string ticketName = 1;
+  float ticketPrice = 2;
+  string stadium = 3;
+}
+
+message TicketsRequest {
+  
+}
+
+message TicketsReply {
+  repeated TicketReply tickets = 1;
 }

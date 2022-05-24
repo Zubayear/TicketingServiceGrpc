@@ -25,7 +25,7 @@ namespace TicketingServiceGrpc.Repository
 
         public async Task<IEnumerable<Models.Ticket>> FetchTickets()
         {
-            return await dynamoDBContext.QueryAsync<Models.Ticket>(default).GetRemainingAsync();
+            return await dynamoDBContext.ScanAsync<Models.Ticket>(default).GetRemainingAsync();
         }
 
         public async Task SaveTicket(Models.Ticket ticket)

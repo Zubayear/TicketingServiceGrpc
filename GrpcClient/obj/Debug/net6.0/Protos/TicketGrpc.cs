@@ -49,6 +49,14 @@ namespace TicketingServiceGrpc {
     static readonly grpc::Marshaller<global::TicketingServiceGrpc.TicketRequest> __Marshaller_ticket_TicketRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TicketingServiceGrpc.TicketRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::TicketingServiceGrpc.TicketReply> __Marshaller_ticket_TicketReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TicketingServiceGrpc.TicketReply.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::TicketingServiceGrpc.TicketByIdRequest> __Marshaller_ticket_TicketByIdRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TicketingServiceGrpc.TicketByIdRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::TicketingServiceGrpc.TicketByIdReply> __Marshaller_ticket_TicketByIdReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TicketingServiceGrpc.TicketByIdReply.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::TicketingServiceGrpc.TicketsRequest> __Marshaller_ticket_TicketsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TicketingServiceGrpc.TicketsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::TicketingServiceGrpc.TicketsReply> __Marshaller_ticket_TicketsReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TicketingServiceGrpc.TicketsReply.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::TicketingServiceGrpc.TicketRequest, global::TicketingServiceGrpc.TicketReply> __Method_CreateTicket = new grpc::Method<global::TicketingServiceGrpc.TicketRequest, global::TicketingServiceGrpc.TicketReply>(
@@ -57,6 +65,22 @@ namespace TicketingServiceGrpc {
         "CreateTicket",
         __Marshaller_ticket_TicketRequest,
         __Marshaller_ticket_TicketReply);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::TicketingServiceGrpc.TicketByIdRequest, global::TicketingServiceGrpc.TicketByIdReply> __Method_GetTicketById = new grpc::Method<global::TicketingServiceGrpc.TicketByIdRequest, global::TicketingServiceGrpc.TicketByIdReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetTicketById",
+        __Marshaller_ticket_TicketByIdRequest,
+        __Marshaller_ticket_TicketByIdReply);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::TicketingServiceGrpc.TicketsRequest, global::TicketingServiceGrpc.TicketsReply> __Method_GetTickets = new grpc::Method<global::TicketingServiceGrpc.TicketsRequest, global::TicketingServiceGrpc.TicketsReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetTickets",
+        __Marshaller_ticket_TicketsRequest,
+        __Marshaller_ticket_TicketsReply);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -110,6 +134,46 @@ namespace TicketingServiceGrpc {
       public virtual grpc::AsyncUnaryCall<global::TicketingServiceGrpc.TicketReply> CreateTicketAsync(global::TicketingServiceGrpc.TicketRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateTicket, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::TicketingServiceGrpc.TicketByIdReply GetTicketById(global::TicketingServiceGrpc.TicketByIdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTicketById(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::TicketingServiceGrpc.TicketByIdReply GetTicketById(global::TicketingServiceGrpc.TicketByIdRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetTicketById, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::TicketingServiceGrpc.TicketByIdReply> GetTicketByIdAsync(global::TicketingServiceGrpc.TicketByIdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTicketByIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::TicketingServiceGrpc.TicketByIdReply> GetTicketByIdAsync(global::TicketingServiceGrpc.TicketByIdRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetTicketById, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::TicketingServiceGrpc.TicketsReply GetTickets(global::TicketingServiceGrpc.TicketsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTickets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::TicketingServiceGrpc.TicketsReply GetTickets(global::TicketingServiceGrpc.TicketsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetTickets, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::TicketingServiceGrpc.TicketsReply> GetTicketsAsync(global::TicketingServiceGrpc.TicketsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTicketsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::TicketingServiceGrpc.TicketsReply> GetTicketsAsync(global::TicketingServiceGrpc.TicketsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetTickets, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]

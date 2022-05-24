@@ -42,5 +42,36 @@ namespace TicketingServiceGrpc.Services
             });
         }
 
+        public override async Task<TicketByIdReply> GetTicketById(TicketByIdRequest request, ServerCallContext context)
+        {
+            var ticket = await ticketRepository.FetchTicket(request.Id);
+            return await Task.FromResult(new TicketByIdReply
+            {
+                TicketName = ticket.TicketName,
+                Stadium = ticket.Stadium,
+                TicketPrice = ticket.TicketPrice
+            });
+        }
+
+        public override async Task<TicketsReply> GetTickets(TicketsRequest request, ServerCallContext context)
+        {
+            var tickets = await ticketRepository.FetchTickets();
+            IList<TicketReply> ticketReplies = new List<TicketReply>();
+            foreach (var ticket in tickets)
+            {
+                ticketReplies.Add(new TicketReply
+                {
+                    TicketName = ticket.TicketName,
+                    TicketPrice = ticket.TicketPrice,
+                    Stadium = ticket.Stadium
+                });
+            }
+
+            return await Task.FromResult(new TicketsReply
+            {
+                Tickets = {ticketReplies}
+            });
+        }
+
     }
 }

@@ -27,15 +27,26 @@ namespace TicketingServiceGrpc {
             "ChNQcm90b3MvdGlja2V0LnByb3RvEgZ0aWNrZXQiSQoNVGlja2V0UmVxdWVz",
             "dBISCgp0aWNrZXROYW1lGAEgASgJEhMKC3RpY2tldFByaWNlGAIgASgCEg8K",
             "B3N0YWRpdW0YAyABKAkiRwoLVGlja2V0UmVwbHkSEgoKdGlja2V0TmFtZRgB",
-            "IAEoCRITCgt0aWNrZXRQcmljZRgCIAEoAhIPCgdzdGFkaXVtGAMgASgJMkQK",
-            "BlRpY2tldBI6CgxDcmVhdGVUaWNrZXQSFS50aWNrZXQuVGlja2V0UmVxdWVz",
-            "dBoTLnRpY2tldC5UaWNrZXRSZXBseUIXqgIUVGlja2V0aW5nU2VydmljZUdy",
-            "cGNiBnByb3RvMw=="));
+            "IAEoCRITCgt0aWNrZXRQcmljZRgCIAEoAhIPCgdzdGFkaXVtGAMgASgJIh8K",
+            "EVRpY2tldEJ5SWRSZXF1ZXN0EgoKAmlkGAEgASgJIksKD1RpY2tldEJ5SWRS",
+            "ZXBseRISCgp0aWNrZXROYW1lGAEgASgJEhMKC3RpY2tldFByaWNlGAIgASgC",
+            "Eg8KB3N0YWRpdW0YAyABKAkiEAoOVGlja2V0c1JlcXVlc3QiNAoMVGlja2V0",
+            "c1JlcGx5EiQKB3RpY2tldHMYASADKAsyEy50aWNrZXQuVGlja2V0UmVwbHky",
+            "xQEKBlRpY2tldBI6CgxDcmVhdGVUaWNrZXQSFS50aWNrZXQuVGlja2V0UmVx",
+            "dWVzdBoTLnRpY2tldC5UaWNrZXRSZXBseRJDCg1HZXRUaWNrZXRCeUlkEhku",
+            "dGlja2V0LlRpY2tldEJ5SWRSZXF1ZXN0GhcudGlja2V0LlRpY2tldEJ5SWRS",
+            "ZXBseRI6CgpHZXRUaWNrZXRzEhYudGlja2V0LlRpY2tldHNSZXF1ZXN0GhQu",
+            "dGlja2V0LlRpY2tldHNSZXBseUIXqgIUVGlja2V0aW5nU2VydmljZUdycGNi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::TicketingServiceGrpc.TicketRequest), global::TicketingServiceGrpc.TicketRequest.Parser, new[]{ "TicketName", "TicketPrice", "Stadium" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::TicketingServiceGrpc.TicketReply), global::TicketingServiceGrpc.TicketReply.Parser, new[]{ "TicketName", "TicketPrice", "Stadium" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::TicketingServiceGrpc.TicketReply), global::TicketingServiceGrpc.TicketReply.Parser, new[]{ "TicketName", "TicketPrice", "Stadium" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TicketingServiceGrpc.TicketByIdRequest), global::TicketingServiceGrpc.TicketByIdRequest.Parser, new[]{ "Id" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TicketingServiceGrpc.TicketByIdReply), global::TicketingServiceGrpc.TicketByIdReply.Parser, new[]{ "TicketName", "TicketPrice", "Stadium" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TicketingServiceGrpc.TicketsRequest), global::TicketingServiceGrpc.TicketsRequest.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TicketingServiceGrpc.TicketsReply), global::TicketingServiceGrpc.TicketsReply.Parser, new[]{ "Tickets" }, null, null, null, null)
           }));
     }
     #endregion
@@ -521,6 +532,719 @@ namespace TicketingServiceGrpc {
           }
           case 26: {
             Stadium = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class TicketByIdRequest : pb::IMessage<TicketByIdRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TicketByIdRequest> _parser = new pb::MessageParser<TicketByIdRequest>(() => new TicketByIdRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TicketByIdRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::TicketingServiceGrpc.TicketReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TicketByIdRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TicketByIdRequest(TicketByIdRequest other) : this() {
+      id_ = other.id_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TicketByIdRequest Clone() {
+      return new TicketByIdRequest(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TicketByIdRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TicketByIdRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TicketByIdRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class TicketByIdReply : pb::IMessage<TicketByIdReply>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TicketByIdReply> _parser = new pb::MessageParser<TicketByIdReply>(() => new TicketByIdReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TicketByIdReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::TicketingServiceGrpc.TicketReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TicketByIdReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TicketByIdReply(TicketByIdReply other) : this() {
+      ticketName_ = other.ticketName_;
+      ticketPrice_ = other.ticketPrice_;
+      stadium_ = other.stadium_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TicketByIdReply Clone() {
+      return new TicketByIdReply(this);
+    }
+
+    /// <summary>Field number for the "ticketName" field.</summary>
+    public const int TicketNameFieldNumber = 1;
+    private string ticketName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string TicketName {
+      get { return ticketName_; }
+      set {
+        ticketName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ticketPrice" field.</summary>
+    public const int TicketPriceFieldNumber = 2;
+    private float ticketPrice_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float TicketPrice {
+      get { return ticketPrice_; }
+      set {
+        ticketPrice_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "stadium" field.</summary>
+    public const int StadiumFieldNumber = 3;
+    private string stadium_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Stadium {
+      get { return stadium_; }
+      set {
+        stadium_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TicketByIdReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TicketByIdReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (TicketName != other.TicketName) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(TicketPrice, other.TicketPrice)) return false;
+      if (Stadium != other.Stadium) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (TicketName.Length != 0) hash ^= TicketName.GetHashCode();
+      if (TicketPrice != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(TicketPrice);
+      if (Stadium.Length != 0) hash ^= Stadium.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (TicketName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(TicketName);
+      }
+      if (TicketPrice != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(TicketPrice);
+      }
+      if (Stadium.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Stadium);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TicketName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(TicketName);
+      }
+      if (TicketPrice != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(TicketPrice);
+      }
+      if (Stadium.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Stadium);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (TicketName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TicketName);
+      }
+      if (TicketPrice != 0F) {
+        size += 1 + 4;
+      }
+      if (Stadium.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Stadium);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TicketByIdReply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.TicketName.Length != 0) {
+        TicketName = other.TicketName;
+      }
+      if (other.TicketPrice != 0F) {
+        TicketPrice = other.TicketPrice;
+      }
+      if (other.Stadium.Length != 0) {
+        Stadium = other.Stadium;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            TicketName = input.ReadString();
+            break;
+          }
+          case 21: {
+            TicketPrice = input.ReadFloat();
+            break;
+          }
+          case 26: {
+            Stadium = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            TicketName = input.ReadString();
+            break;
+          }
+          case 21: {
+            TicketPrice = input.ReadFloat();
+            break;
+          }
+          case 26: {
+            Stadium = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class TicketsRequest : pb::IMessage<TicketsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TicketsRequest> _parser = new pb::MessageParser<TicketsRequest>(() => new TicketsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TicketsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::TicketingServiceGrpc.TicketReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TicketsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TicketsRequest(TicketsRequest other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TicketsRequest Clone() {
+      return new TicketsRequest(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TicketsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TicketsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TicketsRequest other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class TicketsReply : pb::IMessage<TicketsReply>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TicketsReply> _parser = new pb::MessageParser<TicketsReply>(() => new TicketsReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TicketsReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::TicketingServiceGrpc.TicketReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TicketsReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TicketsReply(TicketsReply other) : this() {
+      tickets_ = other.tickets_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TicketsReply Clone() {
+      return new TicketsReply(this);
+    }
+
+    /// <summary>Field number for the "tickets" field.</summary>
+    public const int TicketsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::TicketingServiceGrpc.TicketReply> _repeated_tickets_codec
+        = pb::FieldCodec.ForMessage(10, global::TicketingServiceGrpc.TicketReply.Parser);
+    private readonly pbc::RepeatedField<global::TicketingServiceGrpc.TicketReply> tickets_ = new pbc::RepeatedField<global::TicketingServiceGrpc.TicketReply>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::TicketingServiceGrpc.TicketReply> Tickets {
+      get { return tickets_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TicketsReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TicketsReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!tickets_.Equals(other.tickets_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= tickets_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      tickets_.WriteTo(output, _repeated_tickets_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      tickets_.WriteTo(ref output, _repeated_tickets_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += tickets_.CalculateSize(_repeated_tickets_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TicketsReply other) {
+      if (other == null) {
+        return;
+      }
+      tickets_.Add(other.tickets_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            tickets_.AddEntriesFrom(input, _repeated_tickets_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            tickets_.AddEntriesFrom(ref input, _repeated_tickets_codec);
             break;
           }
         }
